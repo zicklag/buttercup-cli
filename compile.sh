@@ -6,8 +6,8 @@ echo 'import buttercup from "./buttercup_without_types.ts";' > lib/buttercup.ts
 echo 'export default buttercup;' >> lib/buttercup.ts
 
 rm -f bcup
-deno compile --no-check=remote --output bcup mod.ts
+deno compile --unstable --allow-read --allow-write --no-check=remote --output bcup mod.ts
 
 # Switch the buttercup.ts file back to normal
-echo 'import buttercup from "./buttercup_without_types.ts";' > lib/buttercup.ts
+echo 'import buttercup from "./buttercup_with_types.ts";' > lib/buttercup.ts
 echo 'export default buttercup;' >> lib/buttercup.ts

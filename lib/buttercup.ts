@@ -1,2 +1,2 @@
-import buttercup from "./buttercup_without_types.ts";
+import buttercup from "./buttercup_with_types.ts";
 export default buttercup;
